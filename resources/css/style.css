@@ -127,4 +127,11 @@ a.text:hover:before {
 		width: 80%;
 		padding: 0;
 	}
+	.item .description .main{
+		text-align: center;
+	}
+	.category{
+		float: inherit;
+		display: inline-block;
+	}
 }
