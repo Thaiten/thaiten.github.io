@@ -1,0 +1,131 @@
+body{
+  margin: 0;
+  scroll-behavior: smooth;
+  font-family: 'Lato', sans-serif;
+}
+a.text{
+  color: #3e3e3e;
+  text-decoration: none;
+  position: relative;
+	font-weight: 300;
+}
+a.text:before {
+  width: 100%;
+  height: 10px;
+  position: absolute;
+  left: 0px;
+  bottom: -1px;
+  content: "";
+  display: block;
+  background-color: #b7e6ff;
+  z-index: -1;
+  opacity: 1;
+  -webkit-transition: height 0.2s;
+  transition: height 0.2s ease-out;
+}
+a.text:hover:before {
+  color: #90949C;
+  background-color: #b7e6ff;
+  height: 20px;
+}
+a.text svg{
+  height: 14px;
+  vertical-align: baseline;
+}
+#live::before {
+  background-color: #f9bbbb;
+}
+.head{
+  background: #f2f4f8;width: 100%;
+  height: 400px;
+  margin-bottom: 120px;
+}
+.headerImage{
+  width: 100%;
+  height: 400px;
+  /* background-size: cover; */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url(../images/live.png);
+  margin-bottom: 120px;
+}
+.back{
+  display: inline-block;
+  color: #333;
+  margin: 1.5em 0 0 2em;
+  position: absolute;
+}
+.back {
+  cursor: pointer;
+  overflow: hidden;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all 128ms ease-in;
+}
+.back::before, .back::after {
+    background-image: url(../images/arrow-left.svg);
+}
+.back::before, .back::after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.back:hover{
+  transform: scale(1.05) translate3d(0, 0, 0);
+}
+.back:hover::before, .back:hover::after{
+  transform: translateX(-40px);
+      transition: transform .3s ease-out;
+}
+.back::after{
+      left: 40px;
+}
+.content{
+  width: 60%;
+  margin: 0 20%;
+  color: #333;
+  line-height: 1.42857143;
+}
+.content h1{
+  margin: 0 20%;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+}
+.content h2{
+  margin: 20px 20%;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+}
+.content p{
+  margin: 0.5em 20%;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 30px;
+}
+.content .code{
+  background: #d5d5d5;
+  font-family: 'Roboto Slab', serif;
+font-size: 12px;
+padding: 5px;
+}
+.content img{
+  width: 100%;
+  margin: 40px 0;
+}
+.footer{
+  text-align: center;
+  background: #f6f6f6;
+  padding: 2em;
+  margin-top: 5em;
+}
+.footer p{
+  margin: 0;
+}
