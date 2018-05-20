@@ -123,4 +123,8 @@ a.text:hover:before {
 		grid-column-end: 3;
 		text-decoration: none;
 	}
+	.infos{
+		width: 80%;
+		padding: 0;
+	}
 }
