@@ -64,23 +64,28 @@ a.text svg{
   background-repeat: no-repeat;
   transition: all 128ms ease-in;
 }
-.back::before, .back::after {
+.back::before{
     background-image: url(../images/arrow-left.svg);
 }
+.back::after {
+    background-image: url(../images/arrow-left-blue.svg);
+}
 .back::before, .back::after {
-    content: "";
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    background-position: center;
-    background-repeat: no-repeat;
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: translateX(0px);
+  transition: transform .3s ease-out;
 }
 .back:hover{
   transform: scale(1.05) translate3d(0, 0, 0);
 }
 .back:hover::before, .back:hover::after{
   transform: translateX(-40px);
-      transition: transform .3s ease-out;
+  transition: transform .3s ease-out;
 }
 .back::after{
       left: 40px;
