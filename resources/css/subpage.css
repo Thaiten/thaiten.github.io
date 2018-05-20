@@ -90,30 +90,34 @@ a.text svg{
   margin: 0 20%;
   color: #333;
   line-height: 1.42857143;
+  text-align: center;
 }
 .content h1{
   margin: 0 20%;
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   font-size: 30px;
+  text-align: left;
 }
 .content h2{
   margin: 20px 20%;
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   font-size: 22px;
+  text-align: left;
 }
 .content p{
   margin: 0.5em 20%;
   font-weight: 300;
   font-size: 15px;
   line-height: 30px;
+  text-align: left;
 }
 .content .code{
   background: #d5d5d5;
   font-family: 'Roboto Slab', serif;
-font-size: 12px;
-padding: 5px;
+  font-size: 12px;
+  padding: 5px;
 }
 .content img{
   width: 100%;

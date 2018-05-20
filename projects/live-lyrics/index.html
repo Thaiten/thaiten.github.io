@@ -21,12 +21,19 @@
       <p>Ich startete mit der Verfassung meiner Grundidee. Diese war, eine Echtzeitanzeige der
       Lyrics von dem aktuell Spielenden Song auf Spotify. Für die Umsetzung Nutzte ich die APIs
       von <a class="text" target="_blank" href="https://beta.developer.spotify.com/">Spotify<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a> und <a class="text" target="_blank" href="https://docs.genius.com/">Genius<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>.</p>
+
       <img class="img-responsive col-xs-12" src="/resources/images/live-lyrics/concept.jpg" style="" data-action="zoom">
+
       <p>Die Authentifizierung mit Spotify wird durch eine Chrome Extension Funktion ausgeführt. <span class="code">chrome.identity.launchWebAuthFlow</span> Dadurch können Logindaten nicht mitgeschnitten werden.</p>
       <p>Aufgrund von Namensabweichungen zwischen Spotify und Genius, war eine Namensverarbeitung nötig. Als Beispiel: Songname auf Spotify: <b>Home (with Mashine Gun Kelly, X Ambessedors...)</b>; Songname auf Genius: <b>Home</b>. Als
       Präventivmaßnahme nutzte ich ein System, welches den Songnamen nach bestimmten Zeichen (z.B. -, (, ), /) abschneidet. Dadurch werden kostante Resultate erzielt.</p>
       <p>Die Erweiterung befindet sich noch im Beta Stadium und ist deshalb nicht im Chrome Webstore erhältlich.</p>
       <h2 id="webdesign">Webdesign Prozess</h2>
+      <p>Das Ziel bei der Webseite war es, Übersichtlichkeit zu erreichen und den Vorhandenen Platz gut zu nutzen. Ein wichtiger Schritt dazu ist, ein ansprechendes Farbschema zu erstellen und dann auch einzuhalten.</p>
+      <img class="img-responsive col-xs-12" src="/resources/images/live-lyrics/website-daten.jpg" style="" data-action="zoom">
+      <p>Die Internetseite ist in 3 Unterseiten zusammengefasst. Dies reicht für alle wichtigen Informationen und überwältigt den Nutzer nicht direkt beim öffnen. Eine Landingpage, Installationsanleitung und Newsseite.</p>
+      <p>Die Landingpage hatte für mich nur 2 Aufgaben. Die wichtigsten Informationen rüber bringen und Visuell ansprechend zu sein. Der CTA (<b>C</b>all <b>T</b>o <b>A</b>ction) Button ist im Ursprungszustand ein Ghost-Button, welcher sich beim Maus-Over Hovering zu einer gefüllten Schaltfläche transformiert.</p>
+      <img class="img-responsive col-xs-12" src="/resources/images/live-lyrics/button.gif" style="max-width: 304px;">
     </div>
     <div class="footer">
       <p>&copy; 2018 - Eric Wätke</p>
