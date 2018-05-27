@@ -143,7 +143,10 @@ a.text:hover:before {
 }
 
 @media (max-width: 650px) {
-	.content a{
+	body{
+		background-size: 200%;
+	}
+	.content .item{
 		grid-column-start: 1;
 		grid-column-end: 3;
 		text-decoration: none;
