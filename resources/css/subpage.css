@@ -38,8 +38,12 @@ a.text svg{
   background-color: #f9bbbb;
 }
 .head{
-  background: #f2f4f8;width: 100%;
+  background: #2a2835;
+  width: 100%;
   margin-bottom: 120px;
+  box-shadow: 0 1px 28px #0003;
+  transform: skewY(-7deg);
+  margin: 0 0 -50px 0;
 }
 .headerImage{
   width: 100%;
