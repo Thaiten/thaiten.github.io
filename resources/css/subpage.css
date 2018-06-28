@@ -2,6 +2,7 @@ body{
   margin: 0;
   scroll-behavior: smooth;
   font-family: 'Lato', sans-serif;
+  background: #f6f9fc;
 }
 ::selection {color: white; background-color: black;}
 ::-moz-selection {color: white; background-color: black;}
@@ -38,12 +39,21 @@ a.text svg{
   background-color: #f9bbbb;
 }
 .head{
-  background: #2a2835;
+  background: var(--background);
   width: 100%;
   margin-bottom: 120px;
   box-shadow: 0 1px 28px #0003;
-  transform: skewY(-7deg);
   margin: 0 0 -50px 0;
+  height: 500px;
+  position: relative;
+  z-index: -1;
+  -webkit-backface-visibility: hidden;
+}
+.edge{
+  height: 150px;
+  background: white;
+  transform: skewY(-4deg);
+  margin-top: -150px;
 }
 .headerImage{
   width: 100%;
@@ -53,6 +63,8 @@ a.text svg{
   background-position: center bottom;
   background-image: url(../images/live.png);
   margin-bottom: 120px;
+  z-index: -1;
+  position: relative;
 }
 .back{
   display: inline-block;
@@ -103,6 +115,19 @@ a.text svg{
   line-height: 1.42857143;
   text-align: center;
 }
+.content::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 361px;
+  -webkit-transform: skewY(-6deg);
+  transform: skewY(-6deg);
+  background: #f6f9fc;
+  left: 0;
+  z-index: -1;
+}
 .content h1{
   margin: 0 20%;
   font-family: 'Montserrat', sans-serif;
@@ -133,17 +158,28 @@ a.text svg{
 .content img{
   width: 100%;
   margin: 40px 0;
+
+}
+.content img.zoom-img{
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2), 0 3px 20px rgba(86, 86, 86, 0.15);
+  transition: .3s ease all;
+}
+.zoom-overlay{
+  background: #fffc !important;
 }
 .footer{
   text-align: center;
-  background: #f6f6f6;
+  background: var(--background);
   padding: 2em;
   margin-top: 5em;
+  color: #fff;
 }
 .footer p{
   margin: 0;
 }
-
+.footer a.text{
+  color: #f6f6f6;
+}
 @media (max-width: 650px) {
   .headerImage{
     height: 200px;
