@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Live Lyrics - Eric Wätke</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=1' name='viewport' />
+    <meta name="theme-color" content="#2a2835">
+    <style media="screen">
+      :root{
+        --background: #2a2835;
+        --footer-color: #fff;
+        --footer-link-color: #f6f6f6;
+      }
+      .headerImage{
+        background-image: url(/resources/images/live.png);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="Reading-progress">
+      <span id="Progress-bar" class="bar"></span>
+    </div>
+    <a href="/" class="back"></a>
+    <!-- <a href="/" class="back"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg></a> -->
+    <div class="head">
+      <div class="headerImage"></div>
+    </div>
+    <div class="content">
+      <h1>Live Lyrics</h1>
+      <p>Live Lyrics ist eine Browser-Erweiterung für den Google Chrome Browser.
+        Dieses ermöglicht dem Nutzer die Verbindung zum Spotify-Account und das
+        Anzeigen der Lyrics in Echtzeit. Ich werde in diesem Beitrag über die
+        <br><a class="text" href="#addon-entwicklung">Addon-Entwicklung</a> und den <a class="text" href="#webdesign">Webdesign Prozess</a> berichten.<br><a id="live" class="text" target="_blank" href="https://thaiten.github.io/live-lyrics/">Link zum Projekt<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></p>
+      <h2 id="addon-entwicklung">Addon-Entwicklung</h2>
+      <p>Ich startete mit der Verfassung meiner Grundidee. Diese war, eine Echtzeitanzeige der
+      Lyrics von dem aktuell Spielenden Song auf Spotify. Für die Umsetzung Nutzte ich die APIs
+      von <a class="text" target="_blank" href="https://beta.developer.spotify.com/">Spotify<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a> und <a class="text" target="_blank" href="https://docs.genius.com/">Genius<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>.</p>
+
+      <img class="img-responsive col-xs-12" src="/resources/images/live-lyrics/concept.jpg" style="" data-action="zoom">
+
+      <p>Die Authentifizierung mit Spotify wird durch eine Chrome Extension Funktion ausgeführt. <span class="code">chrome.identity.launchWebAuthFlow</span> Dadurch können Logindaten nicht mitgeschnitten werden.</p>
+      <p>Aufgrund von Namensabweichungen zwischen Spotify und Genius, war eine Namensverarbeitung nötig. Als Beispiel: Songname auf Spotify: <b>Home (with Mashine Gun Kelly, X Ambessedors...)</b>; Songname auf Genius: <b>Home</b>. Als
+      Präventivmaßnahme nutzte ich ein System, welches den Songnamen nach bestimmten Zeichen (z.B. -, (, ), /) abschneidet. Dadurch werden kostante Resultate erzielt.</p>
+      <p>Die Erweiterung befindet sich noch im Beta Stadium und ist deshalb nicht im Chrome Webstore erhältlich.</p>
+      <h2 id="webdesign">Webdesign Prozess</h2>
+      <p>Das Ziel bei der Webseite war es, Übersichtlichkeit zu erreichen und den Vorhandenen Platz gut zu nutzen. Ein wichtiger Schritt dazu ist, ein ansprechendes Farbschema zu erstellen und dann auch einzuhalten.</p>
+      <img class="img-responsive col-xs-12" src="/resources/images/live-lyrics/website-daten.jpg" style="" data-action="zoom">
+      <p>Die Internetseite ist in 3 Unterseiten zusammengefasst. Dies reicht für alle wichtigen Informationen und überwältigt den Nutzer nicht direkt beim öffnen. Eine Landingpage, Installationsanleitung und Newsseite.</p>
+      <p>Die Landingpage hatte für mich nur 2 Aufgaben. Die wichtigsten Informationen rüber bringen und Visuell ansprechend zu sein. Der CTA (<b>C</b>all <b>T</b>o <b>A</b>ction) Button ist im Ursprungszustand ein Ghost-Button, welcher sich beim Maus-Over Hovering zu einer gefüllten Schaltfläche transformiert.</p>
+      <img class="img-responsive col-xs-12 static" src="/resources/images/live-lyrics/button.gif" style="max-width: 304px;">
+    </div>
+    <div class="footer">
+      <p>&copy; 2018 - Eric Wätke</p>
+      <p>E-Mail: <a class="text" href="mailto:ewaetke10@gmail.com">ewaetke10[at]gmail.com</a></p>
+      <a class="text" href="http://rocky.me/">Inspiration von Rocky.Me</a>
+    </div>
+  </body>
+</html>
+<script type="text/javascript">
+  window.addEventListener('scroll', function(e) {
+    var s = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+    var body = document.body;
+    var html = document.documentElement;
+    var d = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+    var c = window.innerHeight;
+    var position = (s / (d - c)) * 100;
+    document.getElementById('Progress-bar').setAttribute('style', 'width: ' + position + '%');
+  });
+</script>
+<link rel="stylesheet" href="/resources/css/subpage.css">
+<link rel="stylesheet" href="/resources/css/zoom.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,500" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+<link rel="shortcut icon" type="image/x-icon" href="/resources/images/favicon.png">
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" charset="utf-8"></script>
+<script src="/resources/js/transition.js" charset="utf-8"></script>
+<script src="/resources/js/zoom.js" charset="utf-8"></script>

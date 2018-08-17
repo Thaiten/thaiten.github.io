@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Technica - Eric Wätke</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=1' name='viewport' />
+    <meta name="theme-color" content="#2a2835">
+    <style media="screen">
+      :root{
+        --background: #f2c83c;
+        --footer-color: #000;
+        --footer-link-color: #222;
+      }
+      .headerImage{
+        width: 60% !important;
+        padding: 0 20%;
+      }
+      .headerImage video{
+        filter: opacity(80%);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="Reading-progress">
+      <span id="Progress-bar" class="bar"></span>
+    </div>
+    <a href="/" class="back"></a>
+    <div class="head">
+      <div class="headerImage"><video autoplay loop width="100%">
+        <source src="/resources/images/technica.mp4" type="video/mp4" />
+      </video></div>
+    </div>
+    <div class="content">
+      <h1>Technica</h1>
+      <p>Die Website der Schülerfirme <a id="live" class="text" target="_blank" href="https://technica.events/">Technica Light &amp; Sound<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a> durchging viele Änderungen über die Zeit, wobei die Grundidee gleich blieb. In diesem Beitrag werde ich nächer auf die Grundfunktionen eingehen:</p><ul><li><a class="text" href="#landingpage">Landingpage</a></li><li><a class="text" href="#veranstaltungen">Veranstaltungen</a></li><li><a class="text" href="#leihsystem">Leihsystem</a></li></ul>
+      <h2 id="landingpage">Landingpage</h2>
+      <p>Die Landingpage soll über alle Unternehmensbereiche der Schülerfirma hinweisen. Um dies, ohne jegliche Ablenkung, zu erreichen, entschied ich mich für ein Hero-Image (Bild, welches sich über die Komplette Bildschirmfläche zieht) mit passendem Themenbezogenem Text, welches Galerieartig gewechselt wird.</p>
+      <iframe class="img-responsive" src="https://www.youtube.com/embed/QjOB6y0DHzw?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <p>Kompetenzen werden untereinander mit seitenwechselnden Bildern dargestellt. Direkt unter der Überschrift sind Anker-Links womit man direkt zu einer bestimmten Kompetenz kommt.<br>Im Hintergrund werden stripes angezeigt, welche durch einen CSS Parameter <span class="code">transform: skewX(-12deg);</span> um -12° gedreht wird. Einige dieser Stripes sind Farbneutral, sprich grau bzw wird nur eine Outline angezeigt. Die Farbigen Stripes nehmen die Farben an, welche auch im aktuellen Hero Image angezeigt werden. Dadurch entsteht eine Verbindung zwischen den obrigen Elementen der Webseite und den unteren.</p>
+      <img class="img-responsive col-xs-12" src="/resources/images/technica/kompetenzen.jpg" style="" data-action="zoom">
+      <p>Die Geschäftspartner werden in einem 3*x Grid angezeigt. Die aktuelle Auswahl eines Geschäftspartners wird durch eine Transition dargestellt. Dabei wird das ausgewählte Element leicht vergrößert und die anderen werden weichgezeichnet.</p>
+      <img class="img-responsive col-xs-12" src="/resources/images/technica/partner.gif" style="" data-action="zoom">
+      <h2 id="veranstaltungen">Veranstlatungen</h2>
+      <p>Veranstaltungen sind das wichtigste Thema einer Veranstaltungsfirma, daher liegt auf dieser Unterseite auch ein hoher Wert.</p>
+      <img class="img-responsive col-xs-12" src="/resources/images/technica/aktuelle_veranstaltungen.png" style="" data-action="zoom">
+      <p>Direkt am Seitenanfang werden die Aktuellen Projekte und Veranstaltungen angezeigt. Die Wichtigsten in einem 2*x Grid, darunter eine Auflistung von allen. So wird ein Fokus darauf gesetzt, was am wichtigsten ist.</p>
+      <img class="img-responsive col-xs-12" src="/resources/images/technica/veranstaltungen-gallery.png" style="" data-action="zoom">
+      <p>Darauf folgt eine Auflistung von vergangen Veranstlatungen. Blogartig wird ein Text (im Bild gekürzt) und Bilder angezeigt. Die Bilder sind anklickbar, und sowohl am Desktop, als auch auf dem Mobilen Endgerät wie eine normale Gallerie nutzbar. Die benutzte Liberary ist <a id="live" class="text" target="_blank" href="http://photoswipe.com/">PhotoSwipe.<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></p>
+      <h2 id="leihsystem">Leihsystem</h2>
+      <p>Das Leihsystem ist bei weitem das Komplexeste auf der Webseite. Quasi ein Online-Shop System, nur zum Ausleihen von Veranstaltungstechnik. Gegliedert ist dieser Shop in 4 Teile: Vorschläge und Sets, Tontechnik, Lichttechnik und Zubehör.</p>
+      <p>Für eine Übersichtliche Darstellung gibt es sowohl eine normale Auflistung der Gegenstände, als auch eine Grid-Auflistung. Auf Mobilen Geräten ist diese Auswahl nicht vorhanden, da dies platztechnisch unnötig wäre.</p>
+      <img class="img-responsive col-xs-12" src="/resources/images/technica/leihsystem.jpg" style="" data-action="zoom">
+      <p>Nach einer Auswahl von der Technik wird durch Javascript Verarbeitungen und Datenbankabfragen eine Zusammenfassung erstellt bei welcher man auch gleichzeitig die Anfrage absenden kann.</p>
+      <img class="img-responsive col-xs-12" src="/resources/images/technica/leihauswahl.jpg" style="" data-action="zoom">
+      <p>Nach einer Anfrage werden vom Nutzer eingegebene Daten und ausgewählte Technik zuerst in eine Datenbank hinzugefügt. Von dort aus wird eine Email an konfigurierbare Adressen mit den wichtigsten Informationen gesendet. Somit wird eine sichere Datenverarbeitung und schnelle Antwortmöglichkeit geboten.</p>
+    </div>
+    <div class="footer">
+      <p>&copy; 2018 - Eric Wätke</p>
+      <p>E-Mail: <a class="text" href="mailto:ewaetke10@gmail.com">ewaetke10[at]gmail.com</a></p>
+      <a class="text" href="http://rocky.me/">Inspiration von Rocky.Me</a>
+    </div>
+  </body>
+</html>
+<script type="text/javascript">
+  window.addEventListener('scroll', function(e) {
+    var s = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+    var body = document.body;
+    var html = document.documentElement;
+    var d = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+    var c = window.innerHeight;
+    var position = (s / (d - c)) * 100;
+    document.getElementById('Progress-bar').setAttribute('style', 'width: ' + position + '%');
+  });
+</script>
+<link rel="stylesheet" href="/resources/css/subpage.css">
+<link rel="stylesheet" href="/resources/css/zoom.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,500" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+<link rel="shortcut icon" type="image/x-icon" href="/resources/images/favicon.png">
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" charset="utf-8"></script>
+<script src="/resources/js/transition.js" charset="utf-8"></script>
+<script src="/resources/js/zoom.js" charset="utf-8"></script>
