@@ -11,6 +11,35 @@ body{
 }
 ::selection {color: white; background-color: black;}
 ::-moz-selection {color: white; background-color: black;}
+@font-face {
+  font-family: 'Titillium';
+  src: url('../TitilliumWeb-Roman-VF.ttf') format("truetype-variations");
+  font-weight: 1 999;
+}
+@keyframes font-change {
+	0%{font-weight:200;}
+	25%{font-weight:800;}
+	50%{font-weight:200;}
+}
+h1{
+	font-family: 'Titillium', 'Montserrat', sans-serif;
+	font-weight: 300;
+	font-size: 30px;
+	margin-bottom: 30px;
+}
+h1 .f, h1 .b{font-family: 'Titillium', 'Montserrat', sans-serif;}
+h1 .f{
+	animation-duration: 6s;
+  animation-name: font-change;
+	animation-direction: normal;
+	animation-iteration-count: infinite;
+}
+h1 .b{
+	animation-duration: 6s;
+  animation-name: font-change;
+	animation-direction: reverse;
+	animation-iteration-count: infinite;
+}
 a{
 	text-decoration: none;
 }
@@ -49,10 +78,7 @@ a.text:hover:before {
 	line-height: 1.42857143;
 }
 .infos h1{
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 300;
-	font-size: 30px;
-	margin-bottom: 30px;
+
 }
 .infos p{
 	font-family: 'Lato', sans-serif;
