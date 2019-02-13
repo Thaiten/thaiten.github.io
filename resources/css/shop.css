@@ -32,12 +32,14 @@ h1 .f{
   animation-name: font-change;
 	animation-direction: normal;
 	animation-iteration-count: infinite;
+  animation-timing-function: ease;
 }
 h1 .b{
 	animation-duration: 12s;
   animation-name: font-change;
 	animation-direction: reverse;
 	animation-iteration-count: infinite;
+  animation-timing-function: ease;
 }
 
 /* Navigation */
