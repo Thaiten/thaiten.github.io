@@ -20,33 +20,33 @@
     <div id="Reading-progress">
       <span id="Progress-bar" class="bar"></span>
     </div>
-    <a href="/" class="back"></a>
+    <a href="/en/" class="back"></a>
     <!-- <a href="/" class="back"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg></a> -->
     <div class="head">
       <div class="headerImage"></div>
     </div>
     <div class="content">
       <h1>Live Lyrics</h1>
-      <p>Live Lyrics ist eine Browser-Erweiterung für den Google Chrome Browser.
-        Dieses ermöglicht dem Nutzer die Verbindung zum Spotify-Account und das
-        Anzeigen der Lyrics in Echtzeit. Ich werde in diesem Beitrag über die
-        <br><a class="text" href="#addon-entwicklung">Addon-Entwicklung</a> und den <a class="text" href="#webdesign">Webdesign Prozess</a> berichten.<br><a id="live" class="text" target="_blank" href="https://thaiten.github.io/live-lyrics/">Link zum Projekt<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></p>
-      <h2 id="addon-entwicklung">Addon-Entwicklung</h2>
-      <p>Ich startete mit der Verfassung meiner Grundidee. Diese war, eine Echtzeitanzeige der
-      Lyrics von dem aktuell Spielenden Song auf Spotify. Für die Umsetzung Nutzte ich die APIs
-      von <a class="text" target="_blank" href="https://beta.developer.spotify.com/">Spotify<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a> und <a class="text" target="_blank" href="https://docs.genius.com/">Genius<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>.</p>
-
-      <img class="img-responsive col-xs-12" src="/resources/images/live-lyrics/concept.jpg" style="" data-action="zoom">
-
-      <p>Die Authentifizierung mit Spotify wird durch eine Chrome Extension Funktion ausgeführt. <span class="code">chrome.identity.launchWebAuthFlow</span> Dadurch können Logindaten nicht mitgeschnitten werden.</p>
-      <p>Aufgrund von Namensabweichungen zwischen Spotify und Genius, war eine Namensverarbeitung nötig. Als Beispiel: Songname auf Spotify: <b>Home (with Mashine Gun Kelly, X Ambessedors...)</b>; Songname auf Genius: <b>Home</b>. Als
-      Präventivmaßnahme nutzte ich ein System, welches den Songnamen nach bestimmten Zeichen (z.B. -, (, ), /) abschneidet. Dadurch werden kostante Resultate erzielt.</p>
-      <p>Die Erweiterung befindet sich noch im Beta Stadium und ist deshalb nicht im Chrome Webstore erhältlich.</p>
-      <h2 id="webdesign">Webdesign Prozess</h2>
-      <p>Das Ziel bei der Webseite war es, Übersichtlichkeit zu erreichen und den Vorhandenen Platz gut zu nutzen. Ein wichtiger Schritt dazu ist, ein ansprechendes Farbschema zu erstellen und dann auch einzuhalten.</p>
-      <img class="img-responsive col-xs-12" src="/resources/images/live-lyrics/website-daten.jpg" style="" data-action="zoom">
-      <p>Die Internetseite ist in 3 Unterseiten zusammengefasst. Dies reicht für alle wichtigen Informationen und überwältigt den Nutzer nicht direkt beim öffnen. Eine Landingpage, Installationsanleitung und Newsseite.</p>
-      <p>Die Landingpage hatte für mich nur 2 Aufgaben. Die wichtigsten Informationen rüber bringen und Visuell ansprechend zu sein. Der CTA (<b>C</b>all <b>T</b>o <b>A</b>ction) Button ist im Ursprungszustand ein Ghost-Button, welcher sich beim Maus-Over Hovering zu einer gefüllten Schaltfläche transformiert.</p>
+      <p>Live Lyrics is a Browser Addon developed for Google Chrome.
+        The User can link their Spotify Account to the Addon and then
+        get the lyrics displayed in real-time. I will cover the <a class="text" href="#addon-entwicklung">Addon-Development</a>
+        and the <a class="text" href="#webdesign">webdesign process</a> in this article.
+        <a id="external" class="text" target="_blank" href="https://thaiten.github.io/live-lyrics/">link to the project<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></p>
+      </p>
+      <h2 id="addon-entwicklung">Addon-Development</h2>
+      <p>I started the project by illustrating what I wanted to do. That was plain and simple: displaying lyrics in real-time of the currently playing song on
+        Spotify. To implement these features, I used the APIs of
+        <a class="text" id="external" target="_blank" href="https://beta.developer.spotify.com/">Spotify<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+        and <a class="text" id="external" target="_blank" href="https://docs.genius.com/">Genius<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>.</p>
+      <img class="img-responsive col-xs-12" src="/resources/images/live-lyrics/concept-eng.jpg" style="" data-action="zoom">
+      <p>I handled the authentification with Spotify with a Chrome-Extension exclusive function. <span class="code">chrome.identity.launchWebAuthFlow</span> This emphasizes that all login-data is not saved to some server of mine.</p>
+      <p>The biggest problem I faced was the naming difference of songs between Spotify and Genius. For example, the song name on Spotify: <b>Home (with Mashine Gun Kelly, X Ambessedors...)</b>. The song name on Genius: <b>Home</b>. To prevent false positives, I built an algorithm which cuts the name after certain characters (e.g. -,(,),/) and some other processing. The result still isn't 100% perfect, but way closer than before.</p>
+      <p>The Addon is still under development, but currently on hold. Thus it's not available in the Chrome Webstore.</p>
+      <h2 id="webdesign">Webdesign Process</h2>
+      <p>The goal of the website was to create a simplistic and structured website, which makes good use of the available space. The most important step for this was to me, to find an appealing color-scheme, typography and consistency.</p>
+      <img class="img-responsive col-xs-12" src="/resources/images/live-lyrics/website-daten-eng.jpg" style="" data-action="zoom">
+      <p>The website contains 3 subpages. This is enough to bring across all information, and it's easy on the user. A landing page, installation instructions, and news.</p>
+      <p>The landing page fulfills 2 tasks: to show all important information on first sight and being visually pleasent. The CTA (<b>C</b>all <b>T</b>o <b>A</b>ction) button is the normal state a ghost-button, which transforms into a filled one when the user is hovering the button.</p>
       <img class="img-responsive col-xs-12 static" src="/resources/images/live-lyrics/button.gif" style="max-width: 304px;">
     </div>
     <div class="footer">
