@@ -16,6 +16,12 @@ body{
   src: url('../TitilliumWeb-Roman-VF.ttf') format("truetype-variations");
   font-weight: 1 999;
 }
+@font-face{
+    font-family:"LeagueSpartan";
+    font-display:swap;
+    src:url(../LeagueSpartan-Bold.woff2) format("woff2"),url(../LeagueSpartan-Bold.woff) format("woff"),url(../LeagueSpartan-Bold.eot) format("embedded-opentype"),url(../LeagueSpartan-Bold.otf) format("opentype");
+    font-weight:700
+}
 @keyframes font-change {
 	0%{font-weight:300;}
 	25%{font-weight:800;}
@@ -23,25 +29,10 @@ body{
 	100%{font-weight: 300;}
 }
 h1{
-	font-family: 'Titillium', 'Montserrat', sans-serif;
+	font-family: 'LeagueSpartan', 'Montserrat', sans-serif;
 	font-weight: 300;
 	font-size: 30px;
 	margin-bottom: 30px;
-}
-h1 .f, h1 .b{font-family: 'Titillium', 'Montserrat', sans-serif;}
-h1 .f{
-	animation-duration: 6s;
-  animation-name: font-change;
-	animation-direction: normal;
-	animation-iteration-count: infinite;
-	animation-timing-function: ease;
-}
-h1 .b{
-	animation-duration: 6s;
-  animation-name: font-change;
-	animation-direction: reverse;
-	animation-iteration-count: infinite;
-	animation-timing-function: ease;
 }
 ul{
   padding: 0;
@@ -85,22 +76,71 @@ a.text:hover{
   -webkit-transition: all 200ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
   transition: box-shadow 200ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
+/*NAV*/
+ul{
+  padding: 0;
+  list-style-type: none;
+	position: absolute;
+top: 1em;
+right: 10%;
+}
+ul li{
+  display: inline-block;
+  margin-left: 1em;
+  font-size: 18pt;
+  box-shadow: inset 0 -0.7rem 0 0 #e4f5ff;
+  color: #00000061;
+}
+.darkmode--activated ul li{
+	box-shadow: inset 0 -0.7rem 0 0 #164c6c;
+	color: #e7e7e761;
+}
+ul li:first-child{margin: 0;}
 
+ul li a{
+  -webkit-transition: box-shadow 200ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  transition: box-shadow 200ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  box-shadow: inset 0 -0.7rem 0 0 #b7e6ff;
+  color: #000;
+}
+.darkmode--activated ul li a{
+	color: #fff;
+	box-shadow: inset 0 -0.7rem 0 0 #0072ae;
+}
+ul li a:hover{
+  box-shadow: inset 0 -1.2rem 0 0 #b7e6ff;
+  -webkit-transition: box-shadow 200ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  transition: box-shadow 200ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+.darkmode--activated ul li a:hover{
+	box-shadow: inset 0 -1.2rem 0 0 #0072ae;
+}
+/*NOT NAV ANYMORE*/
 .icon{
 	vertical-align: middle;
 	height: 20pt;
 	margin-right: 8px;
 }
-
+header{
+	display: flex;
+	justify-content: center;
+	height: calc(100vh - 6em);
+}
 .infos{
-	width: 40%;
-	margin: 2em 10%;
-	padding: 10%;
-	color: #333;
-	line-height: 1.42857143;
+	text-align: right;
+	margin: auto;
 }
 .infos h1{
-
+	font-family: 'LeagueSpartan', 'Montserrat', sans-serif;
+	font-size: 7em;
+	font-weight: 700;
+	margin: 0;
+}
+.infos .decorative{
+	font-size: 1.5em;
+	margin: 0;
+	margin-top: -1.25em;
+display: block;
 }
 .infos p{
 	font-family: 'Lato', sans-serif;
@@ -137,6 +177,12 @@ a.text:hover{
 .item:hover {
   box-shadow: 0px 16px 22px 2px rgba(51,51,51,0.2);
   transform: translateY(-20px);
+}
+.darkmode--activated .item{
+	background: #171717;
+}
+.darkmode--activated .item .description .main, .darkmode--activated .item .description p{
+	color: #fff;
 }
 .item video, .item img{
   width: 100%;
