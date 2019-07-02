@@ -23,6 +23,13 @@ a.text:hover {
   -webkit-transition: all 200ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
   transition: box-shadow 200ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
+.darkmode--activated a.text{
+	color: #fff;
+	box-shadow: inset 0 -0.7rem 0 0 #0072ae;
+}
+.darkmode--activated a.text:hover{
+	box-shadow: inset 0 -1.2rem 0 0 #0072ae;
+}
 a.text#external{
   box-shadow: inset 0 -0.4rem 0 0 #f9bbbb;
 }
@@ -46,6 +53,7 @@ a.text svg{
   position: relative;
   z-index: -1;
   -webkit-backface-visibility: hidden;
+  isolation: isolate;
 }
 .edge{
   height: 150px;
@@ -54,6 +62,7 @@ a.text svg{
   margin-top: -150px;
 }
 .headerImage{
+  isolation: isolate;
   width: 100%;
   height: 400px;
   background-size: contain;
@@ -62,6 +71,9 @@ a.text svg{
   margin-bottom: 120px;
   z-index: -1;
   position: relative;
+}
+.headerImage video{
+  isolation: isolate;
 }
 .back{
   display: inline-block;
@@ -146,6 +158,10 @@ a.text svg{
   line-height: 30px;
   text-align: left;
 }
+.darkmode--activated .content p, .darkmode--activated .content ul{
+  font-weight: 400;
+  color: 000;
+}
 .content .code{
   background: #d5d5d5;
   font-family: 'Roboto Slab', serif;
@@ -180,6 +196,7 @@ a.text svg{
   padding: 2em;
   margin-top: 5em;
   color: var(--footer-color);
+  isolation: isolate;
 }
 .footer p{
   margin: 0;

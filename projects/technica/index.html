@@ -33,17 +33,17 @@
       <span id="Progress-bar" class="bar"></span>
     </div>
     <a href="/" class="back"></a>
-    <div class="head">
-      <div class="headerImage"><video autoplay loop width="100%">
-        <source src="/resources/images/technica.mp4" type="video/mp4" />
+    <div class="head darkmode-ignore">
+      <div class="headerImage darkmode-ignore"><video autoplay loop width="100%">
+        <source src="/resources/images/technica.mp4" type="video/mp4" class="darkmode-ignore">
       </video></div>
     </div>
     <div class="content">
       <h1>Technica</h1>
-      <p>Die Website der Schülerfirme <a id="live" class="text" target="_blank" href="https://technica.events/">Technica Light &amp; Sound<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a> durchging viele Änderungen über die Zeit, wobei die Grundidee gleich blieb. In diesem Beitrag werde ich nächer auf die Grundfunktionen eingehen:</p><ul><li><a class="text" href="#landingpage">Landingpage</a></li><li><a class="text" href="#veranstaltungen">Veranstaltungen</a></li><li><a class="text" href="#leihsystem">Leihsystem</a></li></ul>
+      <p>Die Website der Schülerfirma <a id="live" class="text" target="_blank" href="https://technica.events/">Technica Light &amp; Sound<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a> durchging viele Änderungen über die Zeit, wobei die Grundidee gleich blieb. In diesem Beitrag werde ich nächer auf die Grundfunktionen eingehen:</p><ul><li><a class="text" href="#landingpage">Landingpage</a></li><li><a class="text" href="#veranstaltungen">Veranstaltungen</a></li><li><a class="text" href="#leihsystem">Leihsystem</a></li></ul>
       <h2 id="landingpage">Landingpage</h2>
       <p>Die Landingpage soll über alle Unternehmensbereiche der Schülerfirma hinweisen. Um dies, ohne jegliche Ablenkung, zu erreichen, entschied ich mich für ein Hero-Image (Bild, welches sich über die Komplette Bildschirmfläche zieht) mit passendem Themenbezogenem Text, welches Galerieartig gewechselt wird.</p>
-      <iframe class="img-responsive" src="https://www.youtube.com/embed/QjOB6y0DHzw?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <iframe class="img-responsive darkmode-ignore" src="https://www.youtube.com/embed/QjOB6y0DHzw?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       <p>Kompetenzen werden untereinander mit seitenwechselnden Bildern dargestellt. Direkt unter der Überschrift sind Anker-Links womit man direkt zu einer bestimmten Kompetenz kommt.<br>Im Hintergrund werden stripes angezeigt, welche durch einen CSS Parameter <span class="code">transform: skewX(-12deg);</span> um -12° gedreht wird. Einige dieser Stripes sind Farbneutral, sprich grau bzw wird nur eine Outline angezeigt. Die Farbigen Stripes nehmen die Farben an, welche auch im aktuellen Hero Image angezeigt werden. Dadurch entsteht eine Verbindung zwischen den obrigen Elementen der Webseite und den unteren.</p>
       <img class="img-responsive col-xs-12" src="/resources/images/technica/kompetenzen.jpg" style="" data-action="zoom">
       <p>Die Geschäftspartner werden in einem 3*x Grid angezeigt. Die aktuelle Auswahl eines Geschäftspartners wird durch eine Transition dargestellt. Dabei wird das ausgewählte Element leicht vergrößert und die anderen werden weichgezeichnet.</p>
