@@ -81,3 +81,32 @@ a.post h4{
 .fab-contact:hover{
     box-shadow:#B700001C 0 0 10px, #B70000CF 0 0 42px,#B70000B8 0 0 77px;
 }
+
+
+@media only screen and (max-width: 900px){
+    h1{
+        font-size: 6em;
+    }
+    h2{
+        font-size: 2em;
+        margin-top: -.5em;
+    }
+    .image-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media only screen and (max-width: 650px){
+    .image-grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media only screen and (max-width: 450px){
+    h1{
+        font-size: 4em;
+        line-height: .8em;
+    }
+    h2{
+        font-size: 1.5em;
+        margin-top: 0;
+    }
+}
